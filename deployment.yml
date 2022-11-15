@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: aks-deployment
+  labels:
+    app: aks
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: aks
+  template:
+    metadata:
+      labels:
+        app: aks
+    spec:
+      containers:
+      - name: aks
+        image: angularyash.azurecr.io /angularyash:latest
+        ports:
+        - containerPort: 8080
