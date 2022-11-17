@@ -2,4 +2,5 @@ variables:
  - name: nodeversion
    value: '16.x'
  - name: vmimage
-   value: ubuntu-latest  
+   value: ubuntu-latest
+   appType: 'angular'  
