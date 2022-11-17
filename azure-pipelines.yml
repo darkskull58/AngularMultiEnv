@@ -5,14 +5,19 @@
 
 trigger:
 - master
+variables:
+ - name: nodeversion
+   value: 16.x
+ - name: vmimage
+   value: ubuntu-latest  
 
 pool:
-  vmImage: ubuntu-latest
+  vmImage: ${{variables.vmimage}}
 
 steps:
 - task: NodeTool@0
   inputs:
-    versionSpec: '16.x'
+    versionSpec: ${{variables.nodeversion}}
   displayName: 'Install Node.js'
 
 - script: |
