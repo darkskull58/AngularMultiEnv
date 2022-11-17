@@ -12,12 +12,12 @@ variables:
    value: ubuntu-latest  
 
 pool:
-  vmImage: ${{variables.vmimage}}
+  vmImage: ${{ variables.vmimage }}
 
 steps:
 - task: NodeTool@0
   inputs:
-    versionSpec: ${{variables.nodeversion}}
+    versionSpec: ${{ variables.nodeversion }}
   displayName: 'Install Node.js'
 
 - script: |
