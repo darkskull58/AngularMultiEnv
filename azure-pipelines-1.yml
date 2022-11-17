@@ -26,7 +26,7 @@ stages:
           npm install -g @angular/cli
           npm install
           ng build --prod
-          displayName: 'npm install and build'
+        displayName: 'npm install and build'
       - task: CopyFiles@2
         inputs:
           Contents: '**'
@@ -36,3 +36,25 @@ stages:
         inputs:
           PathtoPublish: '$(Build.ArtifactStagingDirectory)/dist'
           ArtifactName: 'drop'
+- ${{ if eq(variables.appType,'dotnet') }}:
+  - stage: 'BUILD'
+    jobs:
+    - job: 'BUILD'  
+      steps:
+      - task: DotNetCoreCLI@2
+        inputs:
+          command: 'restore'
+          feedsToUse: 'select'
+      - task: DotNetCoreCLI@2
+        inputs:
+          command: 'build'
+
+
+      - task: DotNetCoreCLI@2
+        inputs:
+          command: 'publish'
+          publishWebProjects: true
+      - task: PublishPipelineArtifact@1
+        inputs:
+          targetPath: '$(Pipeline.Workspace)'
+          publishLocation: 'pipeline'   
