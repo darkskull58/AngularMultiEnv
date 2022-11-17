@@ -3,4 +3,5 @@ variables:
    value: '16.x'
  - name: vmimage
    value: ubuntu-latest
-   appType: 'angular'  
+ - name: appType
+   value: 'angular' 
