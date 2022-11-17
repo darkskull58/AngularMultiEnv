@@ -8,7 +8,7 @@ trigger:
 variables:
 - template: variable.yml
 pool:
-  vmImage: ubuntu-latest    
+  vmImage: $(vmimage)    
 
 
 stages:
