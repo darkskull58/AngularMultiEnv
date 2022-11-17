@@ -10,30 +10,28 @@ variables:
 pool:
   vmImage: ubuntu-latest    
 
+
 stages:
-- ${{ if eq(variable.appType,'angular') }}:
-- stage: 'BUILD'
-  jobs:
-    steps:
-    - task: NodeTool@0
-      inputs:
-        versionSpec: $(nodeversion)
+- ${{ if eq(variables.appType,'angular') }}:
+  - stage: 'BUILD'
+    jobs:
+      steps:
+      - task: NodeTool@0
+        inputs:
+          versionSpec: $(nodeversion)
         displayName: 'Install Node.js'
 
-    - script: |
-        npm install -g @angular/cli
-        npm install
-        ng build --prod
-        displayName: 'npm install and build'
-    - task: CopyFiles@2
-      inputs:
-        Contents: '**'
-        TargetFolder: '$(build.artifactstagingdirectory)'
+      - script: |
+          npm install -g @angular/cli
+          npm install
+          ng build --prod
+          displayName: 'npm install and build'
+      - task: CopyFiles@2
+        inputs:
+          Contents: '**'
+          TargetFolder: '$(build.artifactstagingdirectory)'
 
-    - task: PublishBuildArtifacts@1
-      inputs:
-        PathtoPublish: '$(Build.ArtifactStagingDirectory)/dist'
-        ArtifactName: 'drop'
-        publishLocation: 'Container'
-    
-
+      - task: PublishBuildArtifacts@1
+        inputs:
+          PathtoPublish: '$(Build.ArtifactStagingDirectory)/dist'
+          ArtifactName: 'drop'
