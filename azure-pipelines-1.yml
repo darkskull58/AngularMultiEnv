@@ -15,6 +15,7 @@ stages:
 - ${{ if eq(variables.appType,'angular') }}:
   - stage: 'BUILD'
     jobs:
+    - job: 'BUILD'
       steps:
       - task: NodeTool@0
         inputs:
