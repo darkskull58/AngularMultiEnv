@@ -5,9 +5,10 @@
 
 trigger:
 - master
-
+variables:
+- template: variable.yml
 pool:
-  vmImage: ubuntu-latest
+  vmImage: ubuntu-latest    
 
 stages:
 - ${{ if eq(variables.appType,'angular') }}:
