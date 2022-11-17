@@ -11,7 +11,7 @@ pool:
   vmImage: ubuntu-latest    
 
 stages:
-- ${{ if eq(variables.appType,'angular') }}:
+- ${{ if eq(variable.appType,'angular') }}:
   - stage: 'BUILD'
     jobs:
       steps:
