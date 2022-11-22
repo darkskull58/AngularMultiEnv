@@ -108,7 +108,7 @@ stages:
                     WebAppName: 'Yash83188'
                     deployToSlotOrASE: true
                     ResourceGroupName: 'prac'
-                    SlotName: 'QA'
+                    SlotName: 'production'
                     packageForLinux: '$(System.ArtifactsDirectory)/drop'                  
       
            
