@@ -58,6 +58,6 @@ stages:
             deployToSlotOrASE: true
             ResourceGroupName: 'prac'
             SlotName: 'dev'
-            packageForLinux: '$(System.DefaultWorkingDirectory)'
+            packageForLinux: '$(System.DefaultWorkingDirectory)/drop'
         
            
