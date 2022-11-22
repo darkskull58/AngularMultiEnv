@@ -37,10 +37,10 @@ stages:
             PathtoPublish: '$(Build.ArtifactStagingDirectory)/dist'
             ArtifactName: 'drop'
             publishLocation: 'Container'
-  - stage: 'Test'
+  - stage: 'Dev'
     jobs:
-      - deployment: 'DeployToTest'
-        environment: 'infrastructure-test'
+      - deployment: 'DeployToDev'
+        environment: 'dev'
         strategy:
             runOnce:
               deploy:
@@ -61,6 +61,24 @@ stages:
                     ResourceGroupName: 'prac'
                     SlotName: 'dev'
                     packageForLinux: '$(System.ArtifactsDirectory)/drop'
+  - stage: 'QA'
+    jobs:
+      - deployment: 'DeployToDev'
+        environment: 'QA'
+        strategy:
+            runOnce:
+              deploy:
+                steps:
+                - task: AzureRmWebAppDeployment@4
+                  inputs:
+                    ConnectionType: 'AzureRM'
+                    azureSubscription: 'Azure for Students (c6b9c786-7711-41dc-a531-d7454bef4572)'
+                    appType: 'webApp'
+                    WebAppName: 'Yash83188'
+                    deployToSlotOrASE: true
+                    ResourceGroupName: 'prac'
+                    SlotName: 'QA'
+                    packageForLinux: '$(System.ArtifactsDirectory)/drop'                  
 
         
            
