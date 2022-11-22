@@ -38,6 +38,8 @@ stages:
             ArtifactName: 'drop'
             publishLocation: 'Container'
   - stage: 'Deploy'
+    pool:
+      vmImage: $(vmimage)
     jobs:
       - job: 
         steps:
@@ -47,5 +49,15 @@ stages:
             downloadType: 'single'
             artifactName: 'drop'
             downloadPath: '$(System.ArtifactsDirectory)'
+        - task: AzureRmWebAppDeployment@4
+          inputs:
+            ConnectionType: 'AzureRM'
+            azureSubscription: 'Azure for Students (c6b9c786-7711-41dc-a531-d7454bef4572)'
+            appType: 'webApp'
+            WebAppName: 'Yash83188'
+            deployToSlotOrASE: true
+            ResourceGroupName: 'prac'
+            SlotName: 'dev'
+            packageForLinux: '$(System.DefaultWorkingDirectory)/**/drop'
         
            
