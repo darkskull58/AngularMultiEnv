@@ -56,7 +56,7 @@ stages:
                     ConnectionType: 'AzureRM'
                     azureSubscription: 'Azure for Students (c6b9c786-7711-41dc-a531-d7454bef4572)'
                     appType: 'webApp'
-                    WebAppName: 'Yash83188'
+                    WebAppName: 'multistage83'
                     deployToSlotOrASE: true
                     ResourceGroupName: 'prac'
                     SlotName: 'dev'
@@ -80,7 +80,7 @@ stages:
                     ConnectionType: 'AzureRM'
                     azureSubscription: 'Azure for Students (c6b9c786-7711-41dc-a531-d7454bef4572)'
                     appType: 'webApp'
-                    WebAppName: 'Yash83188'
+                    WebAppName: 'multistage83'
                     deployToSlotOrASE: true
                     ResourceGroupName: 'prac'
                     SlotName: 'QA'
@@ -105,7 +105,7 @@ stages:
                     ConnectionType: 'AzureRM'
                     azureSubscription: 'Azure for Students (c6b9c786-7711-41dc-a531-d7454bef4572)'
                     appType: 'webApp'
-                    WebAppName: 'Yash83188'
+                    WebAppName: 'multistage83'
                     deployToSlotOrASE: true
                     ResourceGroupName: 'prac'
                     SlotName: 'production'
