@@ -54,7 +54,7 @@ stages:
                 - task: AzureRmWebAppDeployment@4
                   inputs:
                     ConnectionType: 'AzureRM'
-                    azureSubscription: '4dac56d2-d8af-42c7-9f33-548f2a10ddab'
+                    azureSubscription: 'Free Trial (4dac56d2-d8af-42c7-9f33-548f2a10ddab)'
                     appType: 'webApp'
                     WebAppName: 'multistage83'
                     deployToSlotOrASE: true
@@ -78,7 +78,7 @@ stages:
                 - task: AzureRmWebAppDeployment@4
                   inputs:
                     ConnectionType: 'AzureRM'
-                    azureSubscription: '4dac56d2-d8af-42c7-9f33-548f2a10ddab'
+                    azureSubscription: 'Free Trial (4dac56d2-d8af-42c7-9f33-548f2a10ddab)'
                     appType: 'webApp'
                     WebAppName: 'multistage83'
                     deployToSlotOrASE: true
@@ -103,7 +103,7 @@ stages:
                 - task: AzureRmWebAppDeployment@4
                   inputs:
                     ConnectionType: 'AzureRM'
-                    azureSubscription: '4dac56d2-d8af-42c7-9f33-548f2a10ddab'
+                    azureSubscription: 'Free Trial (4dac56d2-d8af-42c7-9f33-548f2a10ddab)'
                     appType: 'webApp'
                     WebAppName: 'multistage83'
                     deployToSlotOrASE: true
