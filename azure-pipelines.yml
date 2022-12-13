@@ -58,7 +58,7 @@ stages:
                     appType: 'webApp'
                     WebAppName: 'multistage83'
                     deployToSlotOrASE: true
-                    ResourceGroupName: 'BasuTestNewResourceGroup'
+                    ResourceGroupName: 'newwebapp'
                     SlotName: 'dev'
                     packageForLinux: '$(System.ArtifactsDirectory)/drop'
   - stage: 'QA'
@@ -82,7 +82,7 @@ stages:
                     appType: 'webApp'
                     WebAppName: 'multistage83'
                     deployToSlotOrASE: true
-                    ResourceGroupName: 'BasuTestNewResourceGroup'
+                    ResourceGroupName: 'newwebapp'
                     SlotName: 'QA'
                     packageForLinux: '$(System.ArtifactsDirectory)/drop'                  
 
@@ -107,7 +107,7 @@ stages:
                     appType: 'webApp'
                     WebAppName: 'multistage83'
                     deployToSlotOrASE: true
-                    ResourceGroupName: 'BasuTestNewResourceGroup'
+                    ResourceGroupName: 'newwebapp'
                     SlotName: 'production'
                     packageForLinux: '$(System.ArtifactsDirectory)/drop'                  
       
