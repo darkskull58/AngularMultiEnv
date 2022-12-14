@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: aks
-        image: angularyash.azurecr.io/angularyash:latest
+        image: sourishdemoacr.azurecr.io/angulardocker:38
         ports:
         - containerPort: 80
