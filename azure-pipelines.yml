@@ -54,11 +54,11 @@ stages:
                 - task: AzureRmWebAppDeployment@4
                   inputs:
                     ConnectionType: 'AzureRM'
-                    azureSubscription: 'Free Trial (4dac56d2-d8af-42c7-9f33-548f2a10ddab)'
+                    azureSubscription: 'Cloud Lab'
                     appType: 'webApp'
                     WebAppName: 'multistage83'
                     deployToSlotOrASE: true
-                    ResourceGroupName: 'newwebapp'
+                    ResourceGroupName: 'sourishwebapp'
                     SlotName: 'dev'
                     packageForLinux: '$(System.ArtifactsDirectory)/drop'
   - stage: 'QA'
@@ -78,11 +78,11 @@ stages:
                 - task: AzureRmWebAppDeployment@4
                   inputs:
                     ConnectionType: 'AzureRM'
-                    azureSubscription: 'Free Trial (4dac56d2-d8af-42c7-9f33-548f2a10ddab)'
+                    azureSubscription: 'Cloud Lab'
                     appType: 'webApp'
                     WebAppName: 'multistage83'
                     deployToSlotOrASE: true
-                    ResourceGroupName: 'newwebapp'
+                    ResourceGroupName: 'sourishwebapp'
                     SlotName: 'QA'
                     packageForLinux: '$(System.ArtifactsDirectory)/drop'                  
 
@@ -103,11 +103,11 @@ stages:
                 - task: AzureRmWebAppDeployment@4
                   inputs:
                     ConnectionType: 'AzureRM'
-                    azureSubscription: 'Free Trial (4dac56d2-d8af-42c7-9f33-548f2a10ddab)'
+                    azureSubscription: 'Cloud Lab'
                     appType: 'webApp'
                     WebAppName: 'multistage83'
                     deployToSlotOrASE: true
-                    ResourceGroupName: 'newwebapp'
+                    ResourceGroupName: 'sourishwebapp'
                     SlotName: 'production'
                     packageForLinux: '$(System.ArtifactsDirectory)/drop'                  
       
