@@ -54,7 +54,7 @@ stages:
                 - task: AzureRmWebAppDeployment@4
                   inputs:
                     ConnectionType: 'AzureRM'
-                    azureSubscription: 'Cloud Lab'
+                    azureSubscription: 'LTIM_CLOUDLAB_SUB'
                     appType: 'webApp'
                     WebAppName: 'multistage83'
                     deployToSlotOrASE: true
@@ -78,7 +78,7 @@ stages:
                 - task: AzureRmWebAppDeployment@4
                   inputs:
                     ConnectionType: 'AzureRM'
-                    azureSubscription: 'Cloud Lab'
+                    azureSubscription: 'LTIM_CLOUDLAB_SUB'
                     appType: 'webApp'
                     WebAppName: 'multistage83'
                     deployToSlotOrASE: true
@@ -103,7 +103,9 @@ stages:
                 - task: AzureRmWebAppDeployment@4
                   inputs:
                     ConnectionType: 'AzureRM'
-                    azureSubscription: 'Cloud Lab'
+                    azureSubscription: 'LTIM_CLOUDLAB_SUB'
+                    
+                    
                     appType: 'webApp'
                     WebAppName: 'multistage83'
                     deployToSlotOrASE: true
