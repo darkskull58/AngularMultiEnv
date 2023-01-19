@@ -56,7 +56,7 @@ stages:
                     ConnectionType: 'AzureRM'
                     azureSubscription: 'LTIM_CLOUDLAB_SUB'
                     appType: 'webApp'
-                    WebAppName: 'multistage83'
+                    WebAppName: 'sourishwebapp'
                     deployToSlotOrASE: true
                     ResourceGroupName: 'sourishwebapp'
                     SlotName: 'dev'
@@ -80,7 +80,7 @@ stages:
                     ConnectionType: 'AzureRM'
                     azureSubscription: 'LTIM_CLOUDLAB_SUB'
                     appType: 'webApp'
-                    WebAppName: 'multistage83'
+                    WebAppName: 'sourishwebapp'
                     deployToSlotOrASE: true
                     ResourceGroupName: 'sourishwebapp'
                     SlotName: 'QA'
@@ -107,7 +107,7 @@ stages:
                     
                     
                     appType: 'webApp'
-                    WebAppName: 'multistage83'
+                    WebAppName: 'sourishwebapp'
                     deployToSlotOrASE: true
                     ResourceGroupName: 'sourishwebapp'
                     SlotName: 'production'
